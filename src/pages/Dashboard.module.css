@@ -1,0 +1,304 @@
+.page {
+  text-align: left;
+}
+
+.hero {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0fdfa 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 26px 20px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-md);
+}
+
+.heroTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.heroIcon {
+  width: 44px;
+  height: 44px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.heroTitle {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-h);
+  line-height: 1.2;
+}
+
+.heroSub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.pillOk,
+.pillOff {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pillOk {
+  background: color-mix(in srgb, var(--ok) 14%, transparent);
+  color: #047857;
+  border: 1px solid color-mix(in srgb, var(--ok) 35%, var(--border));
+}
+
+.pillOff {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 30%, var(--border));
+}
+
+.pillDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1100px) {
+  .metricsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metricCard {
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.metricWater {
+  --water-accent: #0284c7;
+}
+
+.metricTemp {
+  --temp-accent: #e11d48;
+}
+
+.metricHum {
+  --hum-accent: #059669;
+}
+
+.metricHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cardIcon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.metricWater .cardIcon {
+  color: #0284c7;
+}
+
+.metricTemp .cardIcon {
+  color: #e11d48;
+}
+
+.metricHum .cardIcon {
+  color: #059669;
+}
+
+.metricTitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.fieldTag {
+  margin: 3px 0 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.metricValue {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: -0.03em;
+}
+
+.metricUnit {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+.rangeTrack {
+  position: relative;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+
+.rangeOptimal {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ok) 18%, transparent);
+}
+
+.rangeMarker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.metricFoot {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.shoeCard {
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.shoeBad {
+  border-color: color-mix(in srgb, var(--danger) 25%, var(--border));
+}
+
+.shoeGood {
+  border-color: color-mix(in srgb, var(--ok) 28%, var(--border));
+}
+
+.shoeHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.shoeHead .heroIcon {
+  width: 30px;
+  height: 30px;
+  color: #7c3aed;
+}
+
+.shoeTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.shoeInnerBad,
+.shoeInnerGood {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.shoeInnerBad {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+  border: 1px solid color-mix(in srgb, var(--danger) 25%, var(--border));
+}
+
+.shoeInnerGood {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 1px solid color-mix(in srgb, var(--ok) 28%, var(--border));
+}
+
+.shoeEmoji {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.shoeState {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.shoeInnerBad .shoeState {
+  color: #b91c1c;
+}
+
+.shoeInnerGood .shoeState {
+  color: #047857;
+}
+
+.shoeDesc {
+  margin: 0 0 8px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.shoeScore {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.demoBtn {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px dashed var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.demoBtn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
