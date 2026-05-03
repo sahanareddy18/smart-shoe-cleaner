@@ -1,16 +1,93 @@
-# React + Vite
+# Smart Shoe Cleaner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IoT-powered smart shoe cleaning and storage unit dashboard built with React + Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live Monitoring**: Real-time sensor data from ThingSpeak (Temperature, Humidity, Water Level)
+- **Process Management**: Control and monitor cleaning cycles
+- **Analytics**: Track water usage, energy consumption, and shoe health
+- **Scheduling**: Set up automated cleaning schedules
+- **Notifications**: Intelligent alerts for maintenance and cycle completion
+- **Responsive Design**: Works on desktop and mobile devices
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create `.env` file (optional):
+   ```bash
+   VITE_THINGSPEAK_CHANNEL_ID=your_channel_id
+   ```
+
+### Development
+
+Start the dev server:
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Production Build
+
+Build for production:
+```bash
+npm run build
+```
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+## Deployment
+
+### Netlify
+1. Build the project: `npm run build`
+2. Drag the `dist` folder to [Netlify](https://netlify.com)
+
+### Vercel
+```bash
+npm install -g vercel
+vercel
+```
+
+### GitHub Pages
+```bash
+npm run build
+npm run deploy
+```
+
+## Project Structure
+
+```
+src/
+├── components/       # React components
+├── pages/           # Page components
+├── context/         # React context for state management
+├── constants/       # Project constants
+└── assets/          # Static assets
+```
+
+## Tech Stack
+
+- **React 19** - UI library
+- **Vite** - Build tool
+- **React Router** - Client-side routing
+- **ThingSpeak** - IoT data source
+- **CSS Modules** - Styling
+
+## License
+
+MIT
